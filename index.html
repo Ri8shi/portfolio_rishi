@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="icon" type="image/x-icon" href="arts/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="fun.js" defer></script>
+</head>
+
+<body>
+    <nav class="bar">
+        <div class="logo"><a href="index.html">RN</a></div>
+        <ul class="links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="https://drive.google.com/drive/folders/1wvmqMO2uAXPx3WwJE_N1hDiiVbgjo12L?usp=sharing"
+                    target="_blank">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+    <ul class="mobile-links" id="mobileMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1wvmqMO2uAXPx3WwJE_N1hDiiVbgjo12L?usp=sharing"
+                target="_blank">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" onclick="closeMenu()">Close</a></li>
+    </ul>
+    <section class="intro">
+        <img src="arts/back.png" alt="bgimage" class="bgimage">
+        <div>
+            <h5>About me,</h5>
+            <h1>Rishi Nagde</h1>
+            <p>Hey there! This is my web development portfolio. I am a beginner with experience building interactive
+                projects like an online compiler and a gaming website. I am currently focusing on becoming a full-stack
+                developer in the backend field. I am a passionate web developer with experience in responsive and
+                user-friendly websites.</p>
+        </div>
+    </section>
+    <div class="button-group">
+        <a href="https://drive.google.com/drive/folders/1wvmqMO2uAXPx3WwJE_N1hDiiVbgjo12L?usp=sharing"
+            class="but resume-link" target="_blank">
+            <span>Resume</span>
+            <i class="fa-solid fa-download"></i>
+        </a>
+    </div>
+    <div>
+        <h2 id="project" class="project-heading">Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3 class="project-title">Anlogy-AI</h3>
+                <div class="slider">
+                    <div class="slider-track">
+                        <img src="arts/anlogyai1.png" alt="Online Code Compiler screenshot 1">
+                        <img src="arts/anlogyai2.png" alt="Online Code Compiler screenshot 2">
+                    </div>
+                    <button class="slider-btn slider-prev" onclick="changeSlide(this,-1)">&#10094;</button>
+                    <button class="slider-btn slider-next" onclick="changeSlide(this,1)">&#10095;</button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="goToSlide(this,0)"></span>
+                        <span class="dot" onclick="goToSlide(this,1)"></span>
+                    </div>
+                </div>
+                <p class="project-description"> Understand any GitHub repository in seconds. AI-powered tool that
+                    instantly analyzes, breaks down, and explains any GitHub repository.</p>
+                <a href="https://anlogy-ai.streamlit.app/" target="_blank" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3 class="project-title">Gaming Website</h3>
+                <div class="slider">
+                    <div class="slider-track">
+                        <img src="arts/game1.png" alt="Gaming Website screenshot 1">
+                        <img src="arts/game2.png" alt="Gaming Website screenshot 2">
+                        <img src="arts/game3.png" alt="Gaming Website screenshot 2">
+                    </div>
+                    <button class="slider-btn slider-prev" onclick="changeSlide(this,-1)">&#10094;</button>
+                    <button class="slider-btn slider-next" onclick="changeSlide(this,1)">&#10095;</button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="goToSlide(this,0)"></span>
+                        <span class="dot" onclick="goToSlide(this,1)"></span>
+                    </div>
+                </div>
+                <p class="project-description">A gaming website that offers a variety of online games, leaderboards, and
+                    user profiles, providing an engaging experience for gamers.</p>
+                <a href="#" target="_blank" class="project-link">View Project</a>
+            </div>
+        </div>
+    </div>
+    <section class="skills-section">
+        <h2 class="heading">Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C logo">
+                <span>C</span>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/500px-ISO_C%2B%2B_Logo.svg.png"
+                    alt="C++ logo">
+                <span>C++</span>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Python_logo_01.svg" alt="Python logo">
+                <span>Python</span>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+                    alt="HTML logo">
+                <span>HTML</span>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+                    alt="CSS logo">
+                <span>CSS</span>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                    alt="JavaScript logo">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js logo">
+                <span>Node.js</span>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                    alt="Express logo" class="invert-icon">
+                <span>Express</span>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" alt="MongoDB logo">
+                <span>MongoDB</span>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git logo">
+                <span>Git</span>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                    alt="GitHub logo" class="invert-icon">
+                <span>GitHub</span>
+            </div>
+            <div class="skill">
+                <i class="fa-solid fa-gears" style="font-size:18px;width:18px;"></i>
+                <span>REST API</span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="contact" class="contact-container">
+            <h2 class="heading">Contact Me</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="your email address " required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy;2025-26 Rishi Nagde. All rights reserved.</p>
+        <a href="https://www.linkedin.com/in/rishi-nagde/" class="linkedin-link" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>linkedin</span>
+        </a>
+        <a href="mailto:nagderishi@gmail.com" class="gmail-link">
+            <i class="fa-solid fa-envelope"></i>
+            <span>nagderishi@gmail.com</span>
+        </a>
+    </footer>
+</body>
+
+</html>
